@@ -50,7 +50,7 @@ namespace TracNghiemOnline.Controllers
         public ActionResult DoingTest()
         {
             if (!user.IsStudent())
-                return;
+                return View("Error");
             if (!user.IsTesting())
                 return View("Error");
             if(user.TIME != null)
